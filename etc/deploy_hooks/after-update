@@ -1,0 +1,9 @@
+#!/bin/bash
+
+DMT_NODE_CORE="$HOME/.dmt/core/node"
+
+# overwrite fasterix frontend compiled gui for production
+cp "$DMT_NODE_CORE/dmt-fasterix/fproc/public_production/"* "$DMT_NODE_CORE/dmt-fasterix/fproc/public"
+rm "$DMT_NODE_CORE/dmt-fasterix/fproc/public/"*.map # we don't want maps on production as of now
+
+node "${DMT_NODE_CORE}/dmt-gui/gui-backend/ws_servers/index.js" localhost reload gui

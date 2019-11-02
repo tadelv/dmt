@@ -1,0 +1,4 @@
+bin
+core
+.deployignore
+.version

@@ -1,0 +1,327 @@
+{
+  "notifications": [],
+  "controller": {
+    "ticker": 34,
+    "deviceName": "kali",
+    "apMode": false,
+    "time": "18:03",
+    "date": "31. Oct",
+    "dow": "THU",
+    "crashCounter": 0
+  },
+  "deviceDefinition": {
+    "id": "kali",
+    "tagline": "controller, search, play, all the best service in my control"
+  },
+  "log": [
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1319ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[90m\u001b[36mdmt-gui-server\u001b[90m: component \u001b[35mhello\u001b[90m at /hello\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1319
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1319ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[90m\u001b[36mdmt-gui-server\u001b[90m: component \u001b[35mhome\u001b[90m at /home\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1319
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1319ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[90m\u001b[36mdmt-gui-server\u001b[90m: component \u001b[35mmessaging\u001b[90m at /messaging\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1319
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1320ms\u001b[39m\u001b[90m (+01ms)\u001b[39m ∞ \u001b[90m\u001b[36mdmt-gui-server\u001b[90m: component \u001b[35mnavigation\u001b[90m at /navigation\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1320
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1320ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[90m\u001b[36mdmt-gui-server\u001b[90m: component \u001b[35mplayer\u001b[90m at /player\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1320
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1320ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[90m\u001b[36mdmt-gui-server\u001b[90m: component \u001b[35mplayground\u001b[90m at /playground\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1320
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1320ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[90m\u001b[36mdmt-gui-server\u001b[90m: component \u001b[35mquotes\u001b[90m at /quotes\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1320
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1320ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[90m\u001b[36mdmt-gui-server\u001b[90m: component \u001b[35msearch\u001b[90m at /search\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1320
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1320ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[90m\u001b[36mdmt-gui-server\u001b[90m: component \u001b[35mshow_url\u001b[90m at /show_url\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1320
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1321ms\u001b[39m\u001b[90m (+01ms)\u001b[39m ∞ \u001b[90m\u001b[36mdmt-gui-server\u001b[90m: component \u001b[35mweather\u001b[90m at /weather\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1321
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1321ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[90m\u001b[36mdmt-gui-server\u001b[90m: component \u001b[35mwidgets\u001b[90m at /widgets\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1321
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1321ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[90mAdditional static route for server \u001b[36mdmt-gui-server\u001b[90m created: /user/img ■ serving /Users/vid/.dmt/user/frontend-assets/img\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1321
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1321ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[90mAdditional static route for server \u001b[36mdmt-gui-server\u001b[90m created: /user/volatile ■ serving /Users/vid/.dmt/user/frontend-assets/volatile\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1321
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1322ms\u001b[39m\u001b[90m (+01ms)\u001b[39m ∞ \u001b[90mAdditional static route for server \u001b[36mdmt-gui-server\u001b[90m created: /user/wallpapers ■ serving /Users/vid/.dmt/user/frontend-assets/wallpapers\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1322
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1322ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[36mLoading \u001b[35mfasterix\u001b[36m middleware\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1322
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1322ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[36m\u001b[35mfasterix\u001b[36m middleware \u001b[37mis not present\u001b[36m\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1322
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1322ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[33mSetting up middleware\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1322
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1332ms\u001b[39m\u001b[90m (+10ms)\u001b[39m ∞ \u001b[36mInterval handler first execution ...\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1332
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1333ms\u001b[39m\u001b[90m (+01ms)\u001b[39m ∞ \u001b[36mInterval handler first execution done ...\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1333
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1334ms\u001b[39m\u001b[90m (+01ms)\u001b[39m ∞ \u001b[32m✓✓ Program ready\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1334
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1334ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[36m\u001b[35mDEBUG logging is: \u001b[36mdisabled \u001b[90m→ enable with \u001b[32mdmt debug\u001b[90m\u001b[36m\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1334
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1336ms\u001b[39m\u001b[90m (+02ms)\u001b[39m ∞ \u001b[32m🎸 player listening on 5220\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1336
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1336ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[90mMethods: [\u001b[39m\n\u001b[90m  \"help\",\u001b[39m\n\u001b[90m  \"search\",\u001b[39m\n\u001b[90m  \"play\",\u001b[39m\n\u001b[90m  \"add\",\u001b[39m\n\u001b[90m  \"insert\",\u001b[39m\n\u001b[90m  \"insplay\",\u001b[39m\n\u001b[90m  \"pause\",\u001b[39m\n\u001b[90m  \"next\",\u001b[39m\n\u001b[90m  \"list\",\u001b[39m\n\u001b[90m  \"cut\",\u001b[39m\n\u001b[90m  \"paste\",\u001b[39m\n\u001b[90m  \"bump\",\u001b[39m\n\u001b[90m  \"status\",\u001b[39m\n\u001b[90m  \"shuffle\",\u001b[39m\n\u001b[90m  \"stop\",\u001b[39m\n\u001b[90m  \"spaced\",\u001b[39m\n\u001b[90m  \"unspaced\",\u001b[39m\n\u001b[90m  \"volume\",\u001b[39m\n\u001b[90m  \"forward\",\u001b[39m\n\u001b[90m  \"backward\",\u001b[39m\n\u001b[90m  \"goto\",\u001b[39m\n\u001b[90m  \"limit\"\u001b[39m\n\u001b[90m]\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1336
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1337ms\u001b[39m\u001b[90m (+01ms)\u001b[39m ∞ \u001b[32m🚀 search listening on 4770\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1337
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1337ms\u001b[39m\u001b[90m (+00ms)\u001b[39m ∞ \u001b[90mMethods: [\u001b[39m\n\u001b[90m  \"info\",\u001b[39m\n\u001b[90m  \"search\"\u001b[39m\n\u001b[90m]\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1337
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1339ms\u001b[39m\u001b[90m (+02ms)\u001b[39m ∞ \u001b[32m💡 controller listening on 3850\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1339
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1340ms\u001b[39m\u001b[90m (+01ms)\u001b[39m ∞ \u001b[90mMethods: [\u001b[39m\n\u001b[90m  \"help\",\u001b[39m\n\u001b[90m  \"test\",\u001b[39m\n\u001b[90m  \"services\",\u001b[39m\n\u001b[90m  \"log\",\u001b[39m\n\u001b[90m  \"save_state\"\u001b[39m\n\u001b[90m]\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1340
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1344ms\u001b[39m\u001b[90m (+04ms)\u001b[39m ∞ \u001b[32m🌐 DMT GUI via HTTP listening at http://localhost:7777\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1344
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1374ms\u001b[39m\u001b[90m (+30ms)\u001b[39m ∞ \u001b[31mCannot find mpv binary\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1374
+      }
+    },
+    {
+      "msg": "\u001b[35mkali\u001b[39m pid 29053 \u001b[90m10/31/2019, 5:45:21 PM\u001b[39m \u001b[37m1404ms\u001b[39m\u001b[90m (+30ms)\u001b[39m ∞ \u001b[37mCalculated \u001b[35mgui source code\u001b[37m \u001b[32msignature:\u001b[37m \u001b[90m18c30862c70726649657a455944e57948ab160f92ec0fa541bb8766c710921f5\u001b[37m\u001b[39m",
+      "meta": {
+        "deviceId": "kali",
+        "pid": 29053,
+        "time": "10/31/2019, 5:45:21 PM",
+        "epoch": 1404
+      }
+    }
+  ],
+  "nearbyDevices": {
+    "dakarai": {
+      "deviceId": "dakarai",
+      "ip": "192.168.2.171",
+      "processId": 27249,
+      "message": "ΞΞΞ HEY",
+      "origin": "dmt",
+      "hasGui": true,
+      "lastSeen": 1572541447151
+    },
+    "kali": {
+      "deviceId": "kali",
+      "ip": "192.168.2.117",
+      "processId": 29053,
+      "message": "ΞΞΞ HEY",
+      "origin": "dmt",
+      "hasGui": true,
+      "lastSeen": 1572541450289
+    },
+    "apollo": {
+      "deviceId": "apollo",
+      "ip": "192.168.2.164",
+      "processId": 7602,
+      "message": "ΞΞΞ HEY",
+      "origin": "dmt",
+      "playing": false,
+      "hasGui": true,
+      "lastSeen": 1572541448687
+    },
+    "adame": {
+      "deviceId": "adame",
+      "ip": "192.168.2.241",
+      "processId": 11114,
+      "message": "ΞΞΞ HEY",
+      "origin": "dmt",
+      "hasGui": true,
+      "lastSeen": 1572541449301
+    }
+  }
+}
