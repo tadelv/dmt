@@ -1,0 +1,195 @@
+#!/bin/bash
+
+function jazz {
+  mpvc play http://us4.internet-radio.com:8266/stream
+}
+
+function rock {
+  mpvc play http://198.58.98.83:8258/stream
+}
+
+function v {
+  m "vid" "$@"
+}
+
+function m {
+  declare -a opts=(
+    "help"
+
+    "search"
+
+    "play"
+    "pause"
+    "stop"
+    "next"
+
+    "volume"
+    "status"
+    "list"
+
+    "add"
+    "insert"
+    "insplay" # insert-play
+    "bump" # moves song to the next position
+
+    "shuffle"
+    "cut"
+    "paste"
+
+    "forward"
+    "backward"
+    "goto"
+
+    "limit"
+
+    "spaced"
+    "unspaced"
+  )
+
+  if [ "$1" == "-h" ]; then
+    printf "${YELLOW}Usage:${NC}\n"
+    printf "${GREEN}${opts[@]}${NC}\n"
+    return
+  fi
+
+  local video=false
+
+  ## TODO: FIX... instead of "m vid" , pass on the @media=[mediaType] parameter !!
+  if [ "$1" == "vid" ]; then
+    video=true
+    shift
+  fi
+
+  # m [command] @hosts [terms]
+  local command=''
+
+  if [[ "$1" != @* ]]; then
+    command="$1"
+    shift
+  fi
+
+  #-----------#-----------#----------- A BIT OF DUPLICATE CODE FROM function dmt
+  local hosts=""
+
+  local args
+  IFS=' ' read -r -a args <<< "$@"
+
+  for arg in "${args[@]}"
+  do
+    if [ "$arg" == "@all" ]; then
+      local network_id=''
+      get_current_network network_id
+      if [ -n "$network_id" ]; then
+        # extract host from @ symbol but replace @all with the name of current network !
+        hosts="${hosts} @@$network_id"
+        shift
+      fi
+    elif [[ "$arg" == @* ]] && [[ ! "$arg" =~ = ]]; then # @count=200 etc. these should not be treated as hostnames
+      hosts="${hosts} ${arg}"
+      shift
+    fi
+  done
+
+  hosts=$(echo "$hosts" | xargs) # remove trailing whitespace
+  #-----------#-----------#-----------
+
+  local matching_opt=''
+  opts_matcher matching_opt "no_warning" "${command}" "${opts[@]}"
+  if [ $? -ne 0 ]; then # error
+    matching_opt="play" # default command when none specified
+  fi
+
+  local playerCmd="$DMT_NODE_CORE/dmt-player/cli/media.js"
+
+  if [ ! -f "$playerCmd" ]; then # dmt shell before v1.0.79 :::
+    playerCmd="$DMT_NODE_CORE/dmt-controller/cli/music.js"
+  fi
+
+  if $video; then
+
+    if [ -z "$hosts" ]; then
+      node "$playerCmd" "${matching_opt}" "$@" "@media=video"
+    else
+      node "$playerCmd" "${hosts}" "${matching_opt}" "$@" "@media=video"
+    fi
+
+  else
+
+    if [ -z "$hosts" ]; then
+      node "$playerCmd" "${matching_opt}" "$@"
+    else
+      node "$playerCmd" "${hosts}" "${matching_opt}" "$@"
+    fi
+
+  fi
+}
+
+function save_alsa {
+  alsactl --file ~/.config/asound.state store
+}
+
+function restore_alsa {
+  alsactl --file ~/.config/asound.state restore
+}
+
+function mpvc {
+  local script="$DMT_SCRIPTS/mpv_control"
+  if [ -f "$script" ]; then
+    "$script" "$@"
+  else
+    printf "${RED}missing ${script}${NC}\n"
+  fi
+}
+
+function pl {
+  play "$@"
+}
+
+
+
+function soundtest {
+  if is_rpi; then
+    printf "${GREEN}Soundtest ${MAGENTA}0.${NC}\n"
+    aplay "$DMT_PATH/etc/sounds/soundtest/music.wav"
+  fi
+
+  which mpv > /dev/null 2>&1
+
+  if [ ! $? -eq 0 ]; then
+    printf "${MAGENTA}mpv is missing, please install it....${NC}\n"
+    printf "${GRAY}debian linux / raspberrypi${NC} → ${GREEN}sudo apt-get install mpv${NC}\n"
+    printf "${GRAY}macos${NC} → ${GREEN}brew install mpv${NC}\n"
+    printf "${GRAY}windows${NC} → ${YELLOW}?${NC}\n"
+    return
+  fi
+
+  #printf "${GREEN}Soundtest ${MAGENTA}1.${NC}\n"
+  #mpv --no-video "$DMT_PATH/etc/sounds/soundtest/music.mp3"
+
+  printf "${GREEN}Soundtest ${MAGENTA}1.${NC}\n"
+  node "$DMT_NODE_CORE/dmt-controller/lib/player/localMusicPlayer.js"
+}
+
+
+function videotest {
+  # if is_rpi; then
+  #   printf "${GREEN}Soundtest ${MAGENTA}0.${NC}\n"
+  #   aplay "$DMT_PATH/etc/sounds/soundtest/music.wav"
+  # fi
+
+  which mpv > /dev/null 2>&1
+
+  if [ ! $? -eq 0 ]; then
+    printf "${MAGENTA}mpv is missing, please install it....${NC}\n"
+    printf "${GRAY}debian linux / raspberrypi${NC} → ${GREEN}sudo apt-get install mpv${NC}\n"
+    printf "${GRAY}macos${NC} → ${GREEN}brew install mpv${NC}\n"
+    printf "${GRAY}windows${NC} → ${YELLOW}?${NC}\n"
+    return
+  fi
+
+  #printf "${GREEN}Videotest ${MAGENTA}1.${NC}\n"
+  #mpv "$DMT_PATH/etc/videos/videotest/video.mp4"
+
+  printf "${GREEN}Videotest ${MAGENTA}1.${NC}\n"
+  node "$DMT_NODE_CORE/dmt-controller/lib/player/localVideoPlayer.js"
+}

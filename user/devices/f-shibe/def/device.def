@@ -1,0 +1,10 @@
+device: f-shibe
+	
+  service: gui
+    disable: true
+
+  fiber:
+    server: true
+
+  vhost: f/shibe
+    webLoginPassword: p/lamelame

@@ -1,0 +1,71 @@
+#!/bin/bash
+
+source .bash_util
+
+target="../etc/.bash_aliases_bundle"
+target_slim="../etc/.bash_aliases_slim"
+
+VERSION=$(cat ../.version)
+
+# 💡DMT ALIASES -- SLIM PART → $target_slim
+
+cat > "$target_slim" <<EOF
+#!/bin/bash
+
+#                 _
+#             .__(.)< (💡DMT ALIASES v${VERSION})
+#              \___)
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~ WARNING: CHANGES TO THIS FILE WILL BE LOST (FILE IS COMPILED) ~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+EOF
+
+echo >> "$target_slim"
+
+cat .bash_util .bash_dmt_vars .bash_fs .bash_general .bash_good_code .bash_conf_and_log .bash_process .bash_git >> "$target_slim"
+
+
+# 💡🚀🎸 FULL EDITION → $target
+
+cat "$target_slim" > "$target"
+
+cat >> "$target" <<EOF
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~ 💡🚀🎸 FULL EDITION ~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+EOF
+
+cat .bash_core_helpers .bash_node_and_npm .bash_networking .bash_devices .bash_electronics .bash_search .bash_play .bash_dep .bash_update .bash_eth .bash_sbc .bash_dmt >> "$target"
+
+printf "${CYAN}💡 DMT SHELL ${GREEN}on ${CYAN}$(hostname) ${GREEN}constructed and ready 🚀🎸${NC}\n"
+
+if [ -f .bash_staging ]; then
+  #printf "${GRAY} -- included .bash_staging${NC}\n"
+  cat .bash_staging >> "$target"
+fi
+
+cat >> "$target" <<EOF
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~ KEEP THESE AS LAST LINES ~~~~~~~~~~~~~~~~~~~~~~~
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+if [ -f "\$LOGNAME_HOME/.dmt/user/shell/.bash_user" ]; then
+  . "\$LOGNAME_HOME/.dmt/user/shell/.bash_user"
+fi
+
+if [ -f "\$LOGNAME_HOME/.dmt/user/devices/this/shell/.bash_device" ]; then
+  . "\$LOGNAME_HOME/.dmt/user/devices/this/shell/.bash_device"
+fi
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+EOF
+
+#printf "${GREEN}* done${NC}\n"
+

@@ -1,0 +1,3 @@
+device: my_server
+
+  content: * [from] content.def
